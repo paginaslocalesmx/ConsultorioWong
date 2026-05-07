@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorio Dental WONG | Cirujano Dentista Stefhani Wong</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -419,7 +417,7 @@
 
     <header>
         <div class="logo">
-            <img src="logotipoDentalWong.png" alt="Logotipo Dental Wong">
+            <img src="logo Dental Wong.png" alt="Logo Dental Wong">
             <div class="logo-text">Consultorio<br>Dental WONG</div>
         </div>
         <div class="contact-header">
@@ -462,7 +460,7 @@
                 <p>Restauraciones estéticas y duraderas.</p>
             </div>
             <div class="service-card" onclick="openBooking('Cirugías de Muelas del Juicio')">
-                <i class="fas fa-syring"></i>
+                <i class="fas fa-syringe"></i>
                 <h3>Cirugías de Muelas del Juicio</h3>
                 <p>Especialistas en cirugía oral.</p>
             </div>
@@ -487,7 +485,6 @@
         <i class="fas fa-comment-dots"></i>
     </div>
 
-    <!-- Booking Modal -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="toggleModal()">&times;</span>
@@ -512,8 +509,7 @@
                         <span id="monthDisplay">Mayo 2026</span>
                     </div>
                     <div class="calendar-grid" id="calendarGrid">
-                        <!-- Calendar days will be injected here -->
-                    </div>
+                        </div>
                 </div>
                 <input type="hidden" id="selectedDate">
                 <button type="submit" class="btn-3d" style="width: 100%; margin-top: 20px;">Enviar a WhatsApp</button>
@@ -521,7 +517,6 @@
         </div>
     </div>
 
-    <!-- Chat Window -->
     <div id="chatWindow" class="chat-window">
         <div class="chat-header">Asistente Dental WONG</div>
         <div class="chat-body" id="chatBody">
@@ -535,7 +530,7 @@
 
     <footer>
         <div class="footer-info">
-            <img src="logotipoDentalWong.png" alt="Logotipo Dental Wong" style="height: 100px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+            <img src="logo Dental Wong.png" alt="Logo Dental Wong" style="height: 100px; margin-bottom: 20px; filter: brightness(0) invert(1);">
             <h3>Consultorio Dental WONG</h3>
             <p>Dra. Stefhani Wong</p>
             <p><i class="fas fa-map-marker-alt"></i> ALCANFORES 446, DEL CALVARIO, 72700 SAN JUAN CUAUTLANCINGO, PUE MEXICO</p>
@@ -556,7 +551,6 @@
             slides[currentSlide].classList.add('active');
         }
         
-        // Ensure interval is set correctly
         let carouselInterval = setInterval(nextSlide, 5000);
 
         // Modal Logic
@@ -659,7 +653,6 @@
             }, 500);
         }
 
-        // Handle Enter key in chat
         document.getElementById('chatInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleChat();
         });
