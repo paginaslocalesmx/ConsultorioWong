@@ -55,9 +55,21 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        .logo-text {
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--secondary-color);
+            line-height: 1.2;
         }
 
         .contact-header {
@@ -406,7 +418,10 @@
 <body>
 
     <header>
-        <div class="logo">Consultorio Dental WONG</div>
+        <div class="logo">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663071012581/SirrNcxrOewEmOVh.png" alt="Logo Dental Wong">
+            <div class="logo-text">Consultorio<br>Dental WONG</div>
+        </div>
         <div class="contact-header">
             <p><i class="fas fa-phone"></i> 222 118 8047</p>
             <p>Cirujano Dentista Stefhani Wong</p>
@@ -520,6 +535,7 @@
 
     <footer>
         <div class="footer-info">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663071012581/SirrNcxrOewEmOVh.png" alt="Logo Dental Wong" style="height: 100px; margin-bottom: 20px; filter: brightness(0) invert(1);">
             <h3>Consultorio Dental WONG</h3>
             <p>Dra. Stefhani Wong</p>
             <p><i class="fas fa-map-marker-alt"></i> ALCANFORES 446, DEL CALVARIO, 72700 SAN JUAN CUAUTLANCINGO, PUE MEXICO</p>
