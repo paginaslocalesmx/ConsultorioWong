@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorio Dental WONG | Cirujano Dentista Stefhani Wong</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -81,7 +83,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1629909608185-42346fbb178c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1629909608185-42346fbb178c?q=80&w=1920&auto=format&fit=crop');
             background-attachment: fixed;
             background-size: cover;
         }
@@ -105,20 +107,22 @@
             height: 100%;
             text-align: center;
             padding: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .carousel-slide.active {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             animation: fadeIn 0.5s ease-in-out;
         }
 
         .carousel-slide img {
             max-height: 200px;
+            width: auto;
             object-fit: contain;
             margin-bottom: 15px;
+            border-radius: 10px;
         }
 
         @keyframes fadeIn {
@@ -404,6 +408,14 @@
             margin-bottom: 20px;
         }
 
+        .footer-logo-container {
+            background: white;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero-section { height: 350px; }
@@ -429,17 +441,17 @@
     <section class="hero-section parallax">
         <div class="carousel-container">
             <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Consultorio">
+                <img src="https://images.unsplash.com/photo-1629909608185-42346fbb178c?q=80&w=800&auto=format&fit=crop" alt="Consultorio">
                 <h2>Tu Sonrisa, Nuestra Prioridad</h2>
                 <p>Atención profesional con la Dra. Stefhani Wong</p>
             </div>
             <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&w=800&q=80" alt="Equipo">
+                <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?q=80&w=800&auto=format&fit=crop" alt="Equipo">
                 <h2>Tecnología Avanzada</h2>
                 <p>Equipos de última generación para tu cuidado</p>
             </div>
             <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Estética">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop" alt="Estética">
                 <h2>Estética Dental</h2>
                 <p>Diseñamos la sonrisa que siempre soñaste</p>
             </div>
@@ -460,7 +472,7 @@
                 <p>Restauraciones estéticas y duraderas.</p>
             </div>
             <div class="service-card" onclick="openBooking('Cirugías de Muelas del Juicio')">
-                <i class="fas fa-syringe"></i>
+                <i class="fas fa-syring"></i>
                 <h3>Cirugías de Muelas del Juicio</h3>
                 <p>Especialistas en cirugía oral.</p>
             </div>
@@ -485,6 +497,7 @@
         <i class="fas fa-comment-dots"></i>
     </div>
 
+    <!-- Booking Modal -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="toggleModal()">&times;</span>
@@ -509,7 +522,8 @@
                         <span id="monthDisplay">Mayo 2026</span>
                     </div>
                     <div class="calendar-grid" id="calendarGrid">
-                        </div>
+                        <!-- Calendar days will be injected here -->
+                    </div>
                 </div>
                 <input type="hidden" id="selectedDate">
                 <button type="submit" class="btn-3d" style="width: 100%; margin-top: 20px;">Enviar a WhatsApp</button>
@@ -517,6 +531,7 @@
         </div>
     </div>
 
+    <!-- Chat Window -->
     <div id="chatWindow" class="chat-window">
         <div class="chat-header">Asistente Dental WONG</div>
         <div class="chat-body" id="chatBody">
@@ -530,7 +545,9 @@
 
     <footer>
         <div class="footer-info">
-            <img src="logotipo-Dental-Wong.png" alt="Logo Dental Wong" style="height: 100px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+            <div class="footer-logo-container">
+                <img src="logotipo-Dental-Wong.png" alt="Logo Dental Wong" style="height: 80px;">
+            </div>
             <h3>Consultorio Dental WONG</h3>
             <p>Dra. Stefhani Wong</p>
             <p><i class="fas fa-map-marker-alt"></i> ALCANFORES 446, DEL CALVARIO, 72700 SAN JUAN CUAUTLANCINGO, PUE MEXICO</p>
@@ -653,6 +670,7 @@
             }, 500);
         }
 
+        // Handle Enter key in chat
         document.getElementById('chatInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleChat();
         });
